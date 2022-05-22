@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hamburger-menu</title>
+    <link rel="stylesheet" href="css/sample.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Great+Vibes&family=Hahmlet:wght@100&family=Lobster&family=Pacifico&family=Patrick+Hand&family=Poppins:wght@100&family=Quintessential&family=Roboto:ital,wght@0,100;0,300;1,100&family=Rowdies:wght@300&family=Shizuru&display=swap" rel="stylesheet">
+    <!-- <script src="js/myscript.js"></script> -->
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo" style="color: white;">Brand</a>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                   
+                    <a href="#" class="nav-link"><i class="fa fa-home" style="margin-right: 4px;"></i>Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fa fa-group" style="margin-right: 4px;"></i>About</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fa fa-bell" style="margin-right: 4px;"></i></i>Notification</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="fa fa-phone" style="margin-right: 4px;"></i>Contact</a>
+                </li>
+
+            </ul>
+
+            <div class="hamburger" >
+                <span class="bar" style="color: white;"></span>
+                <span class="bar" style="color: white;"></span>
+                <span class="bar" style="color: white;"></span>
+            </div>
+                
+        </nav>
+    </header>
+    
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            console.log('Hello')
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+
+       //when choose, collapse
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
+
+    
+</body>
+</html>

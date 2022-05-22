@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop</title>
+    <style>
+        nav ul{
+            /*display: flex;*/
+            list-style: none;
+        }
+        .menu{
+            display: flex;
+        }
+        a{
+            text-decoration: none;
+        }
+        li{
+            margin-right: 10px;
+        }
+        .service {
+            position: relative;
+        }
+        .dropdown{
+            position: absolute;
+            display: none;
+        }
+        .service:hover .dropdown{
+            display: block;
+        }
+        .dropdown a{
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+
+                <div class="menu">
+                    <li><a href="#"> home </a></li>
+                    <li><a href="#">drop </a></li>
+                    
+                    <li class="service">
+                        <a href="#">Drop </a>
+
+                        
+                        <ul class="dropdown">
+                            <li><a href="#">dropdown</a></li>
+                            <li><a href="#">dropdown</a></li>
+                            <li><a href="#">dropdown</a></li>
+                        </ul>
+                        
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

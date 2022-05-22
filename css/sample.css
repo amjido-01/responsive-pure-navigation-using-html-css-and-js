@@ -1,0 +1,141 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.header{
+    border-bottom: 0.5px solid white;
+    /* background-image: linear-gradient(to right, #a46a14 , rgb(42, 181, 236)); */
+    box-shadow: 5px 5px 5px 2px rgb(206, 206, 206);
+     /* background-color: #fca3b9;  */
+     background-color: #da70d6; 
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.hamburger{
+    display: none;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-item{
+    margin-left: 5rem;
+    
+}
+
+
+.nav-link{
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+
+.nav-link:hover{
+    color: #086d57;
+    /* color: #9f496e; */
+}
+/* 
+.contact{
+    position: relative;
+}
+.drop-list{
+    position: absolute;
+    display: none;
+    background-color: #482ff7;
+}
+.contact:hover .drop-list{
+    display: block;
+    background-color: #482ff7;
+} */
+
+.logo{
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar{
+        justify-content: space-between;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+
+    .nav-item{
+        margin: 2.5rem 0;
+    }
+
+    .nav-link{
+        color: #da70d6;
+    }
+
+    .nav-link:hover{
+        font-size: 19px;
+        /* color: #e0475b; */
+        /* color: #9f496e; */
+    }
+
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+
+
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
